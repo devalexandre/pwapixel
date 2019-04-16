@@ -32,6 +32,8 @@ class Laudos extends Component {
         
     }
     render(){
+
+    
         return(
 
             <div class="container">
@@ -44,13 +46,20 @@ class Laudos extends Component {
                 </tr>
             </thead>
             <tbody>
-                { this.state.laudos.map(laudos =>(
+
+                {this.state.laudos.length > 0 &&
+                
+                this.state.laudos.map(laudos =>(
                     <tr>
                     <td><a href={API+laudos.path} target="_blank">{laudos.file}</a></td>
                     <td><a class="btn btn-primary" role="button" href={API+laudos.path} download={API+laudos.path}>Baixar&nbsp;<i class="fa fa-arrow-circle-down"></i></a></td>
                 </tr>
 
-                ))}
+                ))
+
+                
+                }
+             
                 
                 <tr></tr>
             </tbody>
