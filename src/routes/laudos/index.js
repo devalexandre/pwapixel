@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
-import { API } from '../../config';
+import { API, URL } from '../../config';
 import axios from 'axios';
+import { isEmpty } from 'lodash';
 
 class Laudos extends Component {
 
@@ -18,17 +19,13 @@ class Laudos extends Component {
       
       
 
-        axios(API,{
-            method:'POST', 
-            mode: 'cors',
-             headers: {
-            'Content-Type': 'application/json',
-          }},{ codigo: localStorage.getItem('key')})
+        axios.get(API+localStorage.getItem('key'))
         .then( (res) =>{ 
             vm.setState({laudos:res.data})
+            console.log(res.data)
         })
         .catch(err => console.error('deu ruim'+err))
-   
+      
         
     }
     render(){
@@ -47,12 +44,12 @@ class Laudos extends Component {
             </thead>
             <tbody>
 
-                {this.state.laudos.length > 0 &&
-                
+                {
+                    ! isEmpty(this.state.laudos) && 
                 this.state.laudos.map(laudos =>(
                     <tr>
-                    <td><a href={API+laudos.path} target="_blank">{laudos.file}</a></td>
-                    <td><a class="btn btn-primary" role="button" href={API+laudos.path} download={API+laudos.path}>Baixar&nbsp;<i class="fa fa-arrow-circle-down"></i></a></td>
+                    <td><a href={URL+laudos.path} target="_blank">{laudos.file}</a></td>
+                    <td><a class="btn btn-primary" role="button" href={URL+laudos.path} download={API+laudos.path}>Baixar&nbsp;<i class="fa fa-arrow-circle-down"></i></a></td>
                 </tr>
 
                 ))
