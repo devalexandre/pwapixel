@@ -26,7 +26,7 @@ class Login extends Component{
 
 		localStorage.setItem('key',this.state.codigo)
 
-		route('/laudos/'+this.state.codigo, true);
+		route('/laudos', true);
 	//	console.log('codigo',this.state.codigo);
 	}  
 

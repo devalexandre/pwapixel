@@ -22,7 +22,7 @@ class Laudos extends Component {
         axios.get(API+localStorage.getItem('key'))
         .then( (res) =>{ 
             vm.setState({laudos:res.data})
-            console.log(res.data)
+          
         })
         .catch(err => console.error('deu ruim'+err))
       

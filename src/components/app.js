@@ -21,7 +21,7 @@ export default class App extends Component {
 
 				<Router onChange={this.handleRoute}>
 					<Login path="/" />
-					<Laudos path="/laudos/:key" />
+					<Laudos path="/laudos" />
 
 				</Router>
 			</div>
