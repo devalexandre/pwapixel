@@ -1,4 +1,4 @@
-const API = 'https://apps.indev.net.br/';
+const API = 'https://api.indev.net.br/';
 
 
 
