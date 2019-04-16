@@ -32,7 +32,13 @@ class Laudos extends Component {
 
     
         return(
-
+<div>
+            <nav class="navbar navbar-dark bg-info">
+            <a class="navbar-brand" href="#">
+              <img src="/assets/img/perfil.jpg" width="30" height="30" class="d-inline-block align-top" alt=""/>
+                  PIXEL - Diagnóstico por Imagem 
+            </a>
+          </nav>
             <div class="container">
     <div class="table-responsive mt-5">
         <table class="table">
@@ -63,7 +69,7 @@ class Laudos extends Component {
         </table>
     </div>
 </div>
-
+</div>
         )
     }
 }
