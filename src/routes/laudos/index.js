@@ -27,7 +27,7 @@ class Laudos extends Component {
             mode: 'no-cors',
              headers: {
             'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
+            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
           }},{ codigo: localStorage.getItem('key')})
         .then( (res) =>{ 
             vm.setState({laudos:res.data})
