@@ -40,7 +40,8 @@ class Login extends Component{
 				id="login-block"
 			>
 				<div className="m-auto w-lg-75 w-xl-50">
-					<h2 className="text-info font-weight-light mb-5"><i className="fas fa-user-md" />&nbsp;Laudos Web
+					<h2 className="text-info font-weight-light mb-5">
+					<i className="fas fa-user-md" />&nbsp;Laudos Web
 					</h2>
 					<form onSubmit={this.handleSubmit}>
 						<div className="form-group">
@@ -57,7 +58,7 @@ class Login extends Component{
 				</div>
 			</div>
 			<div className="col-lg-6 d-flex align-items-end" id="bg-block"
-				style="background-image: url(&quot;assets/img/perfil.jpg&quot;);background-size: cover;background-position: center;"
+				style="background-image: url(&quot;/assets/img/perfil.jpg&quot;);background-size: cover;background-position: center;"
 			>
 				<p className="ml-auto small text-dark mb-2"><em>IndevWeb</em></p>
 			</div>
