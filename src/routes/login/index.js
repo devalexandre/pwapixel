@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import linkState from 'linkstate';
-import { set , Store} from 'idb-keyval';
 import { route } from 'preact-router';
 
 

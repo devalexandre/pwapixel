@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import { get, keys } from 'idb-keyval';
 import { API } from '../../config';
 import axios from 'axios';
 
