@@ -36,7 +36,7 @@ class Laudos extends Component {
             <nav class="navbar navbar-dark bg-info">
             <a class="navbar-brand" href="#">
               <img src="/assets/img/perfil.jpg" width="30" height="30" class="d-inline-block align-top" alt=""/>
-                  PIXEL - Diagnóstico por Imagem 
+                  PIXEL - Laudos Web
             </a>
           </nav>
             <div class="container">
