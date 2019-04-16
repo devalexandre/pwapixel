@@ -3,7 +3,7 @@
     "short_name": "Laudos Web",
     "theme_color": "#2196f3",
     "background_color": "#ffffff",
-    "display": "browser",
+    "display": "fullscreen",
     "Scope": "/",
     "start_url": "/",
     "icons": [
