@@ -16,18 +16,13 @@ class Laudos extends Component {
     componentDidMount(){
         const vm = this;
       
-       const headers =  {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
-          };
-
+      
 
         axios(API,{
             method:'POST', 
-            mode: 'no-cors',
+            mode: 'cors',
              headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            'Content-Type': 'application/json',
           }},{ codigo: localStorage.getItem('key')})
         .then( (res) =>{ 
             vm.setState({laudos:res.data})
