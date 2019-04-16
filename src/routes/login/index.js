@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import linkState from 'linkstate';
-import { set } from 'idb-keyval';
+import { set , Store} from 'idb-keyval';
 import { route } from 'preact-router';
 
 
@@ -21,7 +21,11 @@ class Login extends Component{
 
 	handleSubmit = (event) =>{
 		event.preventDefault();
-		set('key', this.state.codigo);
+		//const customStore = new Store('Pixel', 'Storage_Pixel');
+
+		//set('key', this.state.codigo,customStore);
+
+		localStorage.setItem('key',this.state.codigo)
 
 		route('/laudos/'+this.state.codigo, true);
 	//	console.log('codigo',this.state.codigo);

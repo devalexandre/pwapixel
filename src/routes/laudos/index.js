@@ -17,14 +17,14 @@ class Laudos extends Component {
     componentDidMount(){
         const vm = this;
       
-       get('key').then((key) => { 
+     
 
-        axios.post(API,{ codigo: key})
+        axios.post(API,{ codigo: localStorage.getItem('key')})
         .then( (res) =>{ 
             vm.setState({laudos:res.data})
         })
         .catch(err => console.error('deu ruim'+err))
-       })
+   
         
     }
     render(){
