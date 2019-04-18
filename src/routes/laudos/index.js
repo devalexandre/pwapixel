@@ -40,36 +40,26 @@ class Laudos extends Component {
             </a>
           </nav>
             <div class="container">
-    <div class="table-responsive mt-5">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nome: </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
+
 
                 {
                     ! isEmpty(this.state.laudos) && 
                 this.state.laudos.map(laudos =>(
-                    <tr>
-                    <td><a href={URL+laudos.path} target="_blank">{laudos.file}</a></td>
-                    <td><a class="btn btn-primary" role="button" href={URL+laudos.path} download={API+laudos.path}>Baixar&nbsp;<i class="fa fa-arrow-circle-down"></i></a></td>
-                </tr>
+                   
+                       
+                    <div class="w-25 float-left"><a href={URL+laudos.path} target="_blank">
+                         <img  src={URL+laudos.path} class=" img-thumbnail "/>
+                    </a></div>
+                  
 
                 ))
 
                 
                 }
-             
-                
-                <tr></tr>
-            </tbody>
-        </table>
+    
     </div>
 </div>
-</div>
+
         )
     }
 }
